@@ -4,6 +4,7 @@
 
   <p align="center">
     <a href="https://github.com/h3x-levi"><img src="https://img.shields.io/badge/Support_Engineer_II-Amazon_Luna-FF9900?style=for-the-badge&logo=amazon&logoColor=white" alt="Amazon Luna"></a>
+    <a href="https://akshay-m.vercel.app"><img src="https://img.shields.io/badge/Portfolio-akshay--m.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
     <a href="https://www.linkedin.com/in/iakm/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
     <a href="https://x.com/_zenith_am"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
     <a href="mailto:luckymondal70@gmail.com"><img src="https://img.shields.io/badge/Email-luckymondal70%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
@@ -166,6 +167,7 @@ $ sysctl -a | grep -E "languages|cloud|native|sre"
 
 ### 📬 Connect & Collaborate
 
+* 🌐 **Portfolio:** [akshay-m.vercel.app](https://akshay-m.vercel.app)
 * 💼 **LinkedIn:** [linkedin.com/in/iakm](https://www.linkedin.com/in/iakm/)
 * 𝕏 **X (Twitter):** [@_zenith_am](https://x.com/_zenith_am)
 * 📧 **Direct:** [luckymondal70@gmail.com](mailto:luckymondal70@gmail.com)
