@@ -1,90 +1,167 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" width="100%" height="100%">
   <defs>
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#080c14" />
+    <!-- Ultramarine field background with subtle radial depth -->
+    <radialGradient id="field-glow" cx="75%" cy="15%" r="75%">
+      <stop offset="0%" stop-color="#3d4bff" />
+      <stop offset="55%" stop-color="#2f3dff" />
+      <stop offset="100%" stop-color="#1f2bcc" />
+    </radialGradient>
+
+    <!-- Island Rim light (subtle blue/lavender) -->
+    <linearGradient id="rim-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(214, 218, 255, 0.45)" />
+      <stop offset="35%" stop-color="rgba(47, 61, 255, 0.25)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.04)" />
     </linearGradient>
-    <linearGradient id="glow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.6" />
+
+    <!-- Island Rim light with live pink accent for active cards -->
+    <linearGradient id="rim-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 92, 168, 0.75)" />
+      <stop offset="45%" stop-color="rgba(214, 218, 255, 0.35)" />
+      <stop offset="100%" stop-color="rgba(47, 61, 255, 0.15)" />
     </linearGradient>
-    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#818cf8" />
-    </linearGradient>
-    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
-    </linearGradient>
-    <filter id="soft-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="30" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+    <!-- Deep Drop Shadows -->
+    <filter id="island-shadow" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#060a5c" flood-opacity="0.65" />
+    </filter>
+
+    <filter id="notch-shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#060a5c" flood-opacity="0.75" />
     </filter>
   </defs>
 
   <style>
-    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
-    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    .title { font-weight: 800; font-size: 34px; fill: #f8fafc; letter-spacing: -0.5px; }
-    .subtitle { font-weight: 500; font-size: 15px; fill: #94a3b8; letter-spacing: 0.2px; }
-    .highlight { font-weight: 600; fill: #38bdf8; }
-    .prompt { font-weight: 500; font-size: 13px; fill: #a5b4fc; }
-    .tag { font-size: 11px; font-weight: 600; fill: #cbd5e1; }
-    .badge-txt { font-size: 11px; font-weight: 600; fill: #38bdf8; }
+    .sans { font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-feature-settings: "tnum" 1; }
+    
+    .hero-lead { font-size: 16px; fill: #f3f3f1; letter-spacing: -0.2px; }
+    .hero-name { font-size: 50px; fill: #f3f3f1; letter-spacing: -1.2px; line-height: 0.9; }
+    .hero-name-bold { font-weight: 850; }
+    .hero-name-italic { font-weight: 300; font-style: italic; }
+    .hero-sub { font-size: 14.5px; fill: #d6daff; letter-spacing: -0.1px; line-height: 1.5; font-weight: 400; }
+    
+    .notch-text { font-size: 11px; fill: #d6daff; font-weight: 500; letter-spacing: 0.3px; }
+    .notch-badge { font-size: 10px; fill: #ff5ca8; font-weight: 600; letter-spacing: 0.5px; }
+
+    .act-title { font-size: 15px; font-weight: 750; fill: #f3f3f1; letter-spacing: -0.2px; }
+    .act-line { font-size: 12px; fill: #d6daff; font-weight: 400; }
+    .act-chip { font-size: 10px; fill: #a3a3ad; font-weight: 500; }
   </style>
 
-  <!-- Background Card -->
-  <rect x="2" y="2" width="896" height="276" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Canvas: The Drenched Ultramarine Field -->
+  <rect x="0" y="0" width="960" height="450" rx="24" fill="url(#field-glow)" />
 
-  <!-- Subtle glow accents in background -->
-  <circle cx="120" cy="60" r="80" fill="#38bdf8" opacity="0.08" filter="url(#soft-glow)" />
-  <circle cx="800" cy="220" r="100" fill="#c084fc" opacity="0.08" filter="url(#soft-glow)" />
+  <!-- Background decorative notch contour light -->
+  <path d="M 0 0 L 960 0 L 960 70 C 800 75 680 80 480 80 C 280 80 160 75 0 70 Z" fill="rgba(255,255,255,0.03)" />
 
-  <!-- Top Window Header Bar -->
-  <path d="M 2 18 C 2 9.16 9.16 2 18 2 L 882 2 C 890.84 2 898 9.16 898 18 L 898 42 L 2 42 Z" fill="#0b1120" />
-  <line x1="2" y1="42" x2="898" y2="42" stroke="#1e293b" stroke-width="1" />
+  <!-- Floating Dynamic Island / Notch at Top Center -->
+  <g filter="url(#notch-shadow)">
+    <rect x="320" y="22" width="320" height="44" rx="22" fill="#0b0b0d" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+    
+    <!-- Notch Left: Status Context -->
+    <text x="344" y="49" class="sans notch-text">Amazon Luna Ops</text>
+    <circle cx="454" cy="44" r="2.5" fill="#a3a3ad" opacity="0.6" />
 
-  <!-- Window Dots -->
-  <circle cx="26" cy="22" r="5.5" fill="#f43f5e" opacity="0.9" />
-  <circle cx="44" cy="22" r="5.5" fill="#fbbf24" opacity="0.9" />
-  <circle cx="62" cy="22" r="5.5" fill="#10b981" opacity="0.9" />
+    <!-- Notch Center: Hardware Sensor Cutout -->
+    <circle cx="480" cy="44" r="5" fill="#17171c" stroke="#22222a" stroke-width="1" />
 
-  <!-- Window Title -->
-  <text x="450" y="26" text-anchor="middle" class="mono" font-size="12" fill="#64748b" font-weight="500">h3x-levi ~ akshay-mondal // zsh</text>
+    <!-- Notch Right: Pulsing Live Pink Dot & Label -->
+    <text x="548" y="49" class="mono notch-badge">LIVE</text>
+    <circle cx="586" cy="44" r="4.5" fill="#ff5ca8">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="586" cy="44" r="8" fill="none" stroke="#ff5ca8" opacity="0.5">
+      <animate attributeName="r" values="4.5;12;4.5" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0;0.7" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+  </g>
 
-  <!-- Live Status Pill (Top Right) -->
-  <rect x="730" y="12" width="146" height="22" rx="11" fill="#0f172a" stroke="#334155" stroke-width="1" />
-  <circle cx="744" cy="23" r="3.5" fill="#10b981">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
-  </circle>
-  <text x="756" y="26" class="mono badge-txt" font-size="10.5">OPS &amp; RELEASE READY</text>
+  <!-- Hero Content Area (Left aligned, generous typography) -->
+  <g transform="translate(54, 114)">
+    <!-- Top Lede: "I build software that listens." -->
+    <text x="0" y="0" class="sans hero-lead">
+      I build software that <tspan font-weight="750" fill="#f3f3f1">listens.</tspan>
+    </text>
 
-  <!-- Main Content Body -->
-  <!-- Name / Title -->
-  <text x="46" y="98" class="sans title">Akshay Mondal</text>
-  <text x="320" y="96" class="mono" font-size="14" fill="#64748b">(@h3x-levi)</text>
+    <!-- Main Name (Wide Over Italic Rule: Bold 850 + Light Italic 300) -->
+    <text x="0" y="52" class="sans hero-name">
+      <tspan class="hero-name-bold">Akshay </tspan><tspan class="hero-name-italic">Mondal</tspan>
+    </text>
 
-  <!-- Primary Headline -->
-  <text x="46" y="128" class="sans subtitle">
-    Support Engineer II at <tspan fill="#f1f5f9" font-weight="600">Amazon Luna</tspan> <tspan fill="#475569">•</tspan> Bengaluru, India
-  </text>
+    <!-- Subtitle (Soft blue #d6daff) -->
+    <text x="0" y="90" class="sans hero-sub">
+      Support Engineer II at Amazon Luna. Running live operations for cloud gaming
+    </text>
+    <text x="0" y="112" class="sans hero-sub">
+      and shipping native desktop assistants, social listening, and tools ops teams wish they had.
+    </text>
+  </g>
 
-  <!-- Bio statement -->
-  <text x="46" y="156" class="sans subtitle" fill="#cbd5e1" font-size="14">
-    Running live operations for cloud gaming &amp; engineering native tools end-to-end:
-  </text>
-  <text x="46" y="178" class="sans subtitle" fill="#94a3b8" font-size="13.5">
-    Native macOS Assistants (Swift) <tspan fill="#475569">|</tspan> Serverless AI Pipelines (AWS) <tspan fill="#475569">|</tspan> On-Device Intelligence &amp; SRE
-  </text>
+  <!-- 4 Floating Ink Islands / Act Pills (Arranged on 12-col rhythm) -->
+  
+  <!-- Act 1: Olivia (Active Live Card with Pink Rim Accent) -->
+  <g transform="translate(54, 276)" filter="url(#island-shadow)">
+    <rect x="0" y="0" width="198" height="138" rx="26" fill="#0b0b0d" stroke="url(#rim-pink)" stroke-width="1.2" />
+    
+    <!-- Top row: Title + Live Dot -->
+    <text x="20" y="36" class="sans act-title">Olivia</text>
+    <circle cx="174" cy="30" r="4" fill="#ff5ca8">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="174" cy="30" r="8" fill="none" stroke="#ff5ca8" opacity="0.4">
+      <animate attributeName="r" values="4;10;4" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="1.8s" repeatCount="indefinite" />
+    </circle>
 
-  <!-- Terminal Command Prompt Line -->
-  <rect x="46" y="204" width="808" height="48" rx="10" fill="#050811" stroke="#1e293b" stroke-width="1" />
-  <text x="64" y="233" class="mono prompt">
-    <tspan fill="#10b981">➜</tspan> <tspan fill="#38bdf8">~</tspan> <tspan fill="#64748b">shipped</tspan> <tspan fill="#f8fafc">--show-featured</tspan>
-  </text>
-  <text x="290" y="233" class="mono" font-size="12" fill="#94a3b8">
-    [<tspan fill="#38bdf8">Olivia</tspan>, <tspan fill="#818cf8">Signal</tspan>, <tspan fill="#c084fc">StepWise</tspan>, <tspan fill="#34d399">Talaria</tspan>, <tspan fill="#f472b6">Bharat Wallet</tspan>]
-  </text>
+    <!-- Description -->
+    <text x="20" y="64" class="sans act-line">Voice assistant in the notch</text>
+    <text x="20" y="82" class="sans act-line" fill="#a3a3ad" font-size="11">Speech to speech macOS AI</text>
+
+    <!-- Tech Chip inside Island -->
+    <rect x="18" y="100" width="162" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="28" y="115" class="mono act-chip">Swift • Nova 2 • Bedrock</text>
+  </g>
+
+  <!-- Act 2: Signal -->
+  <g transform="translate(268, 276)" filter="url(#island-shadow)">
+    <rect x="0" y="0" width="198" height="138" rx="26" fill="#0b0b0d" stroke="url(#rim-blue)" stroke-width="1" />
+    
+    <text x="20" y="36" class="sans act-title">Signal</text>
+    <circle cx="174" cy="30" r="3" fill="#2f3dff" stroke="#d6daff" stroke-width="1" />
+
+    <text x="20" y="64" class="sans act-line">Social listening engine</text>
+    <text x="20" y="82" class="sans act-line" fill="#a3a3ad" font-size="11">Live incident detection for Luna</text>
+
+    <rect x="18" y="100" width="162" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="28" y="115" class="mono act-chip">AWS Lambda • DynamoDB</text>
+  </g>
+
+  <!-- Act 3: StepWise -->
+  <g transform="translate(482, 276)" filter="url(#island-shadow)">
+    <rect x="0" y="0" width="198" height="138" rx="26" fill="#0b0b0d" stroke="url(#rim-blue)" stroke-width="1" />
+    
+    <text x="20" y="36" class="sans act-title">StepWise</text>
+    <circle cx="174" cy="30" r="3" fill="#2f3dff" stroke="#d6daff" stroke-width="1" />
+
+    <text x="20" y="64" class="sans act-line">SOPs from your clicks</text>
+    <text x="20" y="82" class="sans act-line" fill="#a3a3ad" font-size="11">Chrome workflow recorder</text>
+
+    <rect x="18" y="100" width="162" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="28" y="115" class="mono act-chip">TypeScript • Node • Bedrock</text>
+  </g>
+
+  <!-- Act 4: Utter & Talaria -->
+  <g transform="translate(696, 276)" filter="url(#island-shadow)">
+    <rect x="0" y="0" width="210" height="138" rx="26" fill="#0b0b0d" stroke="url(#rim-blue)" stroke-width="1" />
+    
+    <text x="20" y="36" class="sans act-title">Utter &amp; Talaria</text>
+    <circle cx="186" cy="30" r="3" fill="#2f3dff" stroke="#d6daff" stroke-width="1" />
+
+    <text x="20" y="64" class="sans act-line">macOS Dictation &amp; On-Device AI</text>
+    <text x="20" y="82" class="sans act-line" fill="#a3a3ad" font-size="11">Whisper Large V3 &amp; Mobile LLMs</text>
+
+    <rect x="18" y="100" width="174" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="28" y="115" class="mono act-chip">Swift • SageMaker • Kotlin</text>
+  </g>
 </svg>
