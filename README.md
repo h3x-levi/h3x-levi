@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="./assets/banner.svg" alt="Akshay Mondal Header Banner" width="100%" />
+  <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/banner.svg" alt="Akshay Mondal Header Banner" width="100%" />
 
   <p align="center">
     <a href="https://github.com/h3x-levi"><img src="https://img.shields.io/badge/Support_Engineer_II-Amazon_Luna-FF9900?style=for-the-badge&logo=amazon&logoColor=white" alt="Amazon Luna"></a>
