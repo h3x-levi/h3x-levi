@@ -18,152 +18,139 @@
 
 ### What I *do*
 
-```
-✦ Creative North Star: "The Live Activity"
-  Black islands that grow, split, merge and dock on a drenched ultramarine wallpaper.
-```
-
-I work inside the live operations of a cloud gaming service (**Amazon Luna**) and build the tools I wish existed, solo and end to end:
-
-* **Design** — Interfaces and the pages around them: Olivia's notch UI and voice states, Signal's dashboard, and the product pages for both.
-* **Build** — Native macOS apps in Swift, serverless AI pipelines on AWS, Chrome extensions, and Flutter apps, shipped end to end on my own.
-* **Run** — On-call, incident response, alarm triage, and release days for Amazon Luna. The friction met during live operations becomes the blueprint for the next tool.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/what-i-do.svg" alt="What I Do: Design, Build, Run" width="100%" />
+</div>
 
 ---
 
 ### The *work*
 
-<table>
-  <thead>
+<!-- Project 1: Olivia -->
+<div align="center">
+  <table width="100%" style="border-collapse: collapse; border: none;">
     <tr>
-      <th width="32%">Island</th>
-      <th width="48%">Architecture &amp; Proof</th>
-      <th width="20%">Stack</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <b>🎙️ Olivia</b><br/>
-        <sub>Voice-first AI assistant in the MacBook notch</sub><br/>
-        <img src="https://img.shields.io/badge/LIVE-ff5ca8?style=flat-square" alt="Live state" />
+      <td width="48%" valign="top" style="border: none; padding-right: 20px;">
+        <br/>
+        <img src="https://img.shields.io/badge/VOICE_ASSISTANT-LIVE-ff5ca8?style=flat-square" alt="Live state" />
+        <h2>🎙️ Olivia</h2>
+        <p><b>A voice-first AI assistant living in the MacBook notch.</b></p>
+        <p>Olivia speaks speech-to-speech with <b>Amazon Nova 2 Sonic</b> in seven voice styles with zero typing required. She reads the current screen, guides procedures by navigating to target controls, acts on the desktop with safety confirmation gates, and tracks background coding agents like Claude Code and Codex.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white" alt="Swift" />
+          <img src="https://img.shields.io/badge/SwiftUI-007ACC?style=flat-square&logo=swift&logoColor=white" alt="SwiftUI" />
+          <img src="https://img.shields.io/badge/Nova_2_Sonic-232F3E?style=flat-square&logo=amazon&logoColor=white" alt="Nova 2" />
+          <img src="https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logo=amazon&logoColor=white" alt="Bedrock" />
+          <img src="https://img.shields.io/badge/AWS_CDK-CC2264?style=flat-square&logo=amazonwebservices&logoColor=white" alt="CDK" />
+        </p>
+        <sub><i>Built solo in Swift • Mascot based on CX ArtLab's open-source avatar</i></sub>
       </td>
-      <td>
-        Listens speech-to-speech with <b>Amazon Nova 2 Sonic</b> in seven voice styles. Reads what is on screen, acts on the desktop with confirmation gates, guides workflows button-by-button, and watches coding agents (Claude Code, Codex).
-      </td>
-      <td>
-        <code>Swift</code><br/>
-        <code>SwiftUI</code><br/>
-        <code>AppKit</code><br/>
-        <code>Nova 2</code><br/>
-        <code>AWS CDK</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>📡 Signal</b><br/>
-        <sub>Social listening for Amazon Luna</sub>
-      </td>
-      <td>
-        Collects public community discussions, uses an LLM on <b>Amazon Bedrock</b> to classify urgency and rate severity, alerts the team Slack in real-time, and surfaces trends, sentiment, and incident clusters on a live dashboard.
-      </td>
-      <td>
-        <code>Python</code><br/>
-        <code>Lambda</code><br/>
-        <code>DynamoDB</code><br/>
-        <code>Bedrock</code><br/>
-        <code>S3</code>
+      <td width="52%" align="center" valign="middle" style="border: none;">
+        <a href="https://akshay-m.vercel.app">
+          <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/olivia-showcase.webp" alt="Olivia in the MacBook Notch" width="100%" style="border-radius: 18px; box-shadow: 0 16px 40px rgba(6,10,92,0.6);" />
+        </a>
       </td>
     </tr>
+  </table>
+</div>
+
+<br/>
+
+<!-- Project 2: Signal -->
+<div align="center">
+  <table width="100%" style="border-collapse: collapse; border: none;">
     <tr>
-      <td>
-        <b>📝 StepWise</b><br/>
-        <sub>Chrome extension for instant SOP generation</sub>
+      <td width="52%" align="center" valign="middle" style="border: none;">
+        <a href="https://akshay-m.vercel.app">
+          <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/signal-showcase.webp" alt="Signal Live Feedback and Incident Dashboard" width="100%" style="border-radius: 18px; box-shadow: 0 16px 40px rgba(6,10,92,0.6);" />
+        </a>
       </td>
-      <td>
-        Records user navigation across tabs with highlighted screenshots, masks sensitive fields, infers form patterns, and drafts complete SOP documents ready for export to DOCX, PDF, HTML, or Markdown.
-      </td>
-      <td>
-        <code>TypeScript</code><br/>
-        <code>MV3</code><br/>
-        <code>Node.js</code><br/>
-        <code>Express</code><br/>
-        <code>Bedrock</code>
+      <td width="48%" valign="top" style="border: none; padding-left: 20px;">
+        <br/>
+        <img src="https://img.shields.io/badge/CLOUD_GAMING_OPS-AMAZON_LUNA-2F3DFF?style=flat-square" alt="Amazon Luna" />
+        <h2>📡 Signal</h2>
+        <p><b>Social listening &amp; automated incident detection for Amazon Luna.</b></p>
+        <p>Players report issues in public long before filing tickets. Signal collects live community posts, analyzes urgency with an LLM on <b>Amazon Bedrock</b>, clusters related symptoms into incident threads, and routes critical alerts to the operations Slack channel.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+          <img src="https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white" alt="Lambda" />
+          <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white" alt="DynamoDB" />
+          <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white" alt="S3" />
+          <img src="https://img.shields.io/badge/EventBridge-FF4F8B?style=flat-square&logo=amazonwebservices&logoColor=white" alt="EventBridge" />
+        </p>
+        <sub><i>Live serverless ingest pipeline • Synthetic reference data displayed</i></sub>
       </td>
     </tr>
+  </table>
+</div>
+
+<br/>
+
+<!-- Project 3: StepWise -->
+<div align="center">
+  <table width="100%" style="border-collapse: collapse; border: none;">
     <tr>
-      <td>
-        <b>🗣️ Utter</b><br/>
-        <sub>Native macOS zero-latency dictation</sub>
+      <td width="48%" valign="top" style="border: none; padding-right: 20px;">
+        <br/>
+        <img src="https://img.shields.io/badge/WORKFLOW_AUTOMATION-CHROME_MV3-10B981?style=flat-square" alt="Chrome MV3" />
+        <h2>📝 StepWise</h2>
+        <p><b>Chrome extension that turns clicks into finished SOP documentation.</b></p>
+        <p>Records complex browser procedures step-by-step, capturing targeted screenshots with interacted elements highlighted and sensitive data masked. Amazon Bedrock structures user actions into clean documentation ready to edit and export to DOCX, PDF, HTML, or Markdown.</p>
+        <p>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+          <img src="https://img.shields.io/badge/Chrome_MV3-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome" />
+          <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node" />
+          <img src="https://img.shields.io/badge/Bedrock-232F3E?style=flat-square&logo=amazon&logoColor=white" alt="Bedrock" />
+          <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="Postgres" />
+        </p>
+        <sub><i>Full in-panel Word-style ribbon editor • Native messaging update system</i></sub>
       </td>
-      <td>
-        Native Swift app with voice activity detection, <b>Whisper Large V3</b> inference on Amazon SageMaker, Bedrock formatting, and direct injection into any focused app via Accessibility APIs.
-      </td>
-      <td>
-        <code>Swift</code><br/>
-        <code>Whisper V3</code><br/>
-        <code>SageMaker</code><br/>
-        <code>Bedrock</code><br/>
-        <code>SigV4</code>
+      <td width="52%" align="center" valign="middle" style="border: none;">
+        <a href="https://akshay-m.vercel.app">
+          <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/stepwise-showcase.jpg" alt="StepWise SOP Editor" width="100%" style="border-radius: 18px; box-shadow: 0 16px 40px rgba(6,10,92,0.6);" />
+        </a>
       </td>
     </tr>
+  </table>
+</div>
+
+<br/>
+
+<!-- Project 4: Mobile & Local AI (Talaria & Bharat Wallet) -->
+<div align="center">
+  <table width="100%" style="border-collapse: collapse; border: none;">
     <tr>
-      <td>
-        <b>⚡ <a href="https://github.com/h3x-levi/talaria">Talaria</a></b><br/>
-        <sub>Local LLM agent for mobile devices</sub>
+      <td width="52%" align="center" valign="middle" style="border: none;">
+        <a href="https://github.com/h3x-levi/Wallet">
+          <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/wallet-showcase.jpg" alt="Bharat Wallet Mobile Interface" width="100%" style="border-radius: 18px; box-shadow: 0 16px 40px rgba(6,10,92,0.6);" />
+        </a>
       </td>
-      <td>
-        Private, on-device mobile AI agent framework enabling local model execution and system-level task automation directly on Android hardware.
-      </td>
-      <td>
-        <code>Kotlin</code><br/>
-        <code>On-Device AI</code><br/>
-        <code>Android</code>
+      <td width="48%" valign="top" style="border: none; padding-left: 20px;">
+        <br/>
+        <img src="https://img.shields.io/badge/OPEN_SOURCE-MOBILE_&_ON--DEVICE_AI-7F52FF?style=flat-square" alt="Mobile" />
+        <h2>⚡ Talaria &amp; 💳 Bharat Wallet</h2>
+        <p><b>On-device intelligent systems &amp; encrypted mobile experiences.</b></p>
+        <p><b><a href="https://github.com/h3x-levi/talaria">Talaria</a></b> is an open-source Kotlin framework bringing private, offline LLM agent capability to Android hardware with local task automation.</p>
+        <p><b><a href="https://github.com/h3x-levi/Wallet">Bharat Wallet</a></b> is a local-first digital wallet in Flutter featuring encrypted on-device storage, biometric authentication, and contactless mock-ups.</p>
+        <p>
+          <a href="https://github.com/h3x-levi/talaria"><img src="https://img.shields.io/badge/talaria-Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Talaria" /></a>
+          <a href="https://github.com/h3x-levi/Wallet"><img src="https://img.shields.io/badge/Wallet-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Wallet" /></a>
+          <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+          <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" alt="Firebase" />
+        </p>
+        <sub><i>Local-first architecture • Zero external cloud dependency for credentials</i></sub>
       </td>
     </tr>
-    <tr>
-      <td>
-        <b>💳 <a href="https://github.com/h3x-levi/Wallet">Bharat Wallet</a></b><br/>
-        <sub>Local-first digital wallet</sub>
-      </td>
-      <td>
-        Encrypted on-device data store, biometric unlock, and contactless payment mock-ups engineered with Flutter and Riverpod.
-      </td>
-      <td>
-        <code>Dart</code><br/>
-        <code>Flutter</code><br/>
-        <code>Firebase</code><br/>
-        <code>Biometrics</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>🌐 <a href="https://github.com/h3x-levi/portfolio">Portfolio</a></b><br/>
-        <sub><a href="https://akshay-m.vercel.app">akshay-m.vercel.app</a></sub>
-      </td>
-      <td>
-        Personal portfolio told in the notch language of macOS on a drenched ultramarine field. Features a custom raymarched fragment shader in raw WebGL and View Transitions API.
-      </td>
-      <td>
-        <code>React 19</code><br/>
-        <code>TypeScript</code><br/>
-        <code>WebGL</code><br/>
-        <code>Vite 6</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  </table>
+</div>
 
 ---
 
 ### Languages & *tools*
 
-| Domain | Systems &amp; Platforms |
-| :--- | :--- |
-| **Languages I write** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white) ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) |
-| **Cloud &amp; Infrastructure** | ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white) ![Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white) ![Bedrock](https://img.shields.io/badge/Amazon_Bedrock-232F3E?style=flat-square&logo=amazon&logoColor=white) ![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white) ![S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazons3&logoColor=white) ![AWS CDK](https://img.shields.io/badge/AWS_CDK-CC2264?style=flat-square&logo=amazonwebservices&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat-square&logo=terraform&logoColor=white) ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white) |
-| **Native &amp; Client** | ![SwiftUI](https://img.shields.io/badge/SwiftUI-007ACC?style=flat-square&logo=swift&logoColor=white) ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black) ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white) ![Chrome Extensions](https://img.shields.io/badge/Chrome_MV3-4285F4?style=flat-square&logo=googlechrome&logoColor=white) |
-| **Observability &amp; Operations** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logo=amazoncloudwatch&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat-square&logo=argo&logoColor=white) |
+<div align="center">
+  <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/tech-stack.svg" alt="Languages and Tools Matrix" width="100%" />
+</div>
 
 ---
 
@@ -191,13 +178,20 @@ I work inside the live operations of a cloud gaming service (**Amazon Luna**) an
 
 ### Let's *talk.*
 
-A new role, a project, or a question about something I built. My inbox is open.
+<div align="center">
+  <a href="mailto:luckymondal70@gmail.com">
+    <img src="https://raw.githubusercontent.com/h3x-levi/h3x-levi/main/assets/contact-card.svg" alt="Let's Talk Contact Card" width="100%" />
+  </a>
+</div>
 
-* 🌐 **Portfolio:** [akshay-m.vercel.app](https://akshay-m.vercel.app)
-* 💼 **LinkedIn:** [linkedin.com/in/iakm](https://www.linkedin.com/in/iakm/)
-* 𝕏 **X (Twitter):** [@_zenith_am](https://x.com/_zenith_am)
-* 📧 **Direct:** [luckymondal70@gmail.com](mailto:luckymondal70@gmail.com)
-* 📍 **Location:** Bengaluru, India
+<br/>
+
+<div align="center">
+  <a href="https://akshay-m.vercel.app"><img src="https://img.shields.io/badge/Portfolio-akshay--m.vercel.app-2F3DFF?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/iakm/"><img src="https://img.shields.io/badge/LinkedIn-iakm-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/_zenith_am"><img src="https://img.shields.io/badge/X-@__zenith__am-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+  <a href="mailto:luckymondal70@gmail.com"><img src="https://img.shields.io/badge/Direct-luckymondal70%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+</div>
 
 <br/>
 

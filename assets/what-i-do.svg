@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="100%" height="100%">
+  <defs>
+    <!-- Deep Drop Shadows -->
+    <filter id="card-shadow" x="-10%" y="-10%" width="125%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#060a5c" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Normal Rim Light -->
+    <linearGradient id="rim-std" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(214, 218, 255, 0.45)" />
+      <stop offset="40%" stop-color="rgba(47, 61, 255, 0.2)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)" />
+    </linearGradient>
+
+    <!-- Live Pink Rim Light -->
+    <linearGradient id="rim-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 92, 168, 0.75)" />
+      <stop offset="45%" stop-color="rgba(214, 218, 255, 0.3)" />
+      <stop offset="100%" stop-color="rgba(47, 61, 255, 0.15)" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sans { font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-feature-settings: "tnum" 1; }
+    
+    .card-label { font-size: 10px; font-weight: 600; fill: #d6daff; letter-spacing: 0.8px; }
+    .card-title { font-size: 26px; fill: #f3f3f1; letter-spacing: -0.6px; line-height: 1; }
+    .card-title-bold { font-weight: 850; }
+    .card-title-italic { font-weight: 300; font-style: italic; }
+    
+    .card-body { font-size: 12.5px; fill: #c9c9d1; line-height: 1.5; font-weight: 400; }
+    .chip-txt { font-size: 10px; fill: #d6daff; font-weight: 500; }
+  </style>
+
+  <!-- Card 1: DESIGN -->
+  <g transform="translate(10, 8)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="298" height="204" rx="22" fill="#0b0b0d" stroke="url(#rim-std)" stroke-width="1.2" />
+    
+    <!-- Top Step Pill -->
+    <rect x="20" y="18" width="102" height="20" rx="10" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="30" y="32" class="mono card-label">01 // INTERFACE</text>
+
+    <!-- Big Verb Title -->
+    <text x="20" y="68" class="sans card-title card-title-bold">Design</text>
+
+    <!-- Body Description -->
+    <text x="20" y="96" class="sans card-body">
+      Interfaces and the spaces around them:
+    </text>
+    <text x="20" y="114" class="sans card-body">
+      Olivia's notch states, Signal's dashboard,
+    </text>
+    <text x="20" y="132" class="sans card-body">
+      and bespoke high-finish product pages.
+    </text>
+
+    <!-- Chips Row -->
+    <rect x="20" y="156" width="76" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="28" y="171" class="mono chip-txt">Notch UI</text>
+
+    <rect x="102" y="156" width="86" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="110" y="171" class="mono chip-txt">Dashboards</text>
+
+    <rect x="194" y="156" width="78" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="202" y="171" class="mono chip-txt">Design Sys</text>
+  </g>
+
+  <!-- Card 2: BUILD -->
+  <g transform="translate(330, 8)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="298" height="204" rx="22" fill="#0b0b0d" stroke="url(#rim-std)" stroke-width="1.2" />
+    
+    <!-- Top Step Pill -->
+    <rect x="20" y="18" width="96" height="20" rx="10" fill="#17171c" stroke="rgba(255,255,255,0.08)" stroke-width="0.8" />
+    <text x="30" y="32" class="mono card-label">02 // SYSTEMS</text>
+
+    <!-- Big Verb Title (Italic 300) -->
+    <text x="20" y="68" class="sans card-title card-title-italic">Build</text>
+
+    <!-- Body Description -->
+    <text x="20" y="96" class="sans card-body">
+      Native macOS software in Swift, serverless
+    </text>
+    <text x="20" y="114" class="sans card-body">
+      pipelines on AWS, Chrome extensions, and
+    </text>
+    <text x="20" y="132" class="sans card-body">
+      local mobile AI agents shipped solo.
+    </text>
+
+    <!-- Chips Row -->
+    <rect x="20" y="156" width="82" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="28" y="171" class="mono chip-txt">Native Swift</text>
+
+    <rect x="108" y="156" width="98" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="116" y="171" class="mono chip-txt">AWS Serverless</text>
+
+    <rect x="212" y="156" width="72" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="220" y="171" class="mono chip-txt">Local AI</text>
+  </g>
+
+  <!-- Card 3: RUN (Live Ops Card with Pink Rim & Pulse) -->
+  <g transform="translate(650, 8)" filter="url(#card-shadow)">
+    <rect x="0" y="0" width="300" height="204" rx="22" fill="#0b0b0d" stroke="url(#rim-pink)" stroke-width="1.2" />
+    
+    <!-- Top Step Pill with Live Dot -->
+    <rect x="20" y="18" width="112" height="20" rx="10" fill="#17171c" stroke="rgba(255,92,168,0.3)" stroke-width="0.8" />
+    <circle cx="32" cy="28" r="3.5" fill="#ff5ca8">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <text x="42" y="32" class="mono card-label" fill="#ff5ca8">03 // LIVE OPS</text>
+
+    <!-- Big Verb Title -->
+    <text x="20" y="68" class="sans card-title card-title-bold">Run</text>
+
+    <!-- Body Description -->
+    <text x="20" y="96" class="sans card-body">
+      Incident response, release-day coordination,
+    </text>
+    <text x="20" y="114" class="sans card-body">
+      and alarm triage for Amazon Luna. The problems
+    </text>
+    <text x="20" y="132" class="sans card-body">
+      I meet there become the next tool I engineer.
+    </text>
+
+    <!-- Chips Row -->
+    <rect x="20" y="156" width="76" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="28" y="171" class="mono chip-txt">On-Call</text>
+
+    <rect x="102" y="156" width="86" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="110" y="171" class="mono chip-txt">Release Days</text>
+
+    <rect x="194" y="156" width="86" height="22" rx="11" fill="#17171c" stroke="rgba(255,255,255,0.06)" />
+    <text x="202" y="171" class="mono chip-txt">Alarm Triage</text>
+  </g>
+</svg>

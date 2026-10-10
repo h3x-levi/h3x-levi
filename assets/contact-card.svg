@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="100%" height="100%">
+  <defs>
+    <filter id="contact-shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#060a5c" flood-opacity="0.55" />
+    </filter>
+
+    <linearGradient id="rim-contact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 92, 168, 0.65)" />
+      <stop offset="30%" stop-color="rgba(214, 218, 255, 0.4)" />
+      <stop offset="70%" stop-color="rgba(47, 61, 255, 0.2)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.05)" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sans { font-family: "Mona Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+    
+    .c-title { font-size: 34px; fill: #f3f3f1; letter-spacing: -0.8px; }
+    .c-sub { font-size: 14px; fill: #d6daff; font-weight: 400; line-height: 1.5; }
+    .pill-txt { font-size: 12px; font-weight: 600; fill: #f8fafc; }
+  </style>
+
+  <g transform="translate(10, 8)" filter="url(#contact-shadow)">
+    <!-- Main Island Container -->
+    <rect x="0" y="0" width="940" height="184" rx="26" fill="#0b0b0d" stroke="url(#rim-contact)" stroke-width="1.2" />
+
+    <!-- Notch Top Cutout with Live Dot -->
+    <path d="M 430 0 L 442 14 L 498 14 L 510 0 Z" fill="#050507" />
+    <circle cx="470" cy="7" r="3.5" fill="#ff5ca8">
+      <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Left: Title & Sub -->
+    <text x="36" y="60" class="sans c-title">
+      <tspan font-weight="850">Let's </tspan><tspan font-weight="300" font-style="italic">talk.</tspan>
+    </text>
+    <text x="36" y="90" class="sans c-sub">
+      A new role, a project, or a question about something I built. My inbox is open.
+    </text>
+    <text x="36" y="112" class="mono" font-size="11.5" fill="#a3a3ad">
+      📍 Based in Bengaluru, India • Support Engineer II @ Amazon Luna
+    </text>
+
+    <!-- Right Side: Visual Contact Pills -->
+    <!-- Pill 1: Email (Paper White Fill) -->
+    <g transform="translate(620, 36)">
+      <rect x="0" y="0" width="280" height="38" rx="19" fill="#f3f3f1" />
+      <text x="24" y="24" class="sans" font-size="12.5" font-weight="700" fill="#0b0b0d">✉️ luckymondal70@gmail.com</text>
+    </g>
+
+    <!-- Pill 2: Portfolio Link -->
+    <g transform="translate(620, 84)">
+      <rect x="0" y="0" width="280" height="38" rx="19" fill="#17171c" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+      <text x="24" y="24" class="sans" font-size="12.5" font-weight="600" fill="#d6daff">🌐 akshay-m.vercel.app</text>
+    </g>
+
+    <!-- Bottom Row Links -->
+    <g transform="translate(620, 132)">
+      <rect x="0" y="0" width="134" height="34" rx="17" fill="#17171c" stroke="rgba(255,255,255,0.08)" />
+      <text x="18" y="22" class="sans" font-size="11.5" font-weight="600" fill="#f8fafc">💼 LinkedIn</text>
+
+      <rect x="146" y="0" width="134" height="34" rx="17" fill="#17171c" stroke="rgba(255,255,255,0.08)" />
+      <text x="168" y="22" class="sans" font-size="11.5" font-weight="600" fill="#f8fafc">𝕏 Twitter</text>
+    </g>
+  </g>
+</svg>
